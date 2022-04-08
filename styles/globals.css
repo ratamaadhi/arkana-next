@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 html,
 body {
   padding: 0;
@@ -13,4 +19,75 @@ a {
 
 * {
   box-sizing: border-box;
+  @apply scroll-smooth;
+}
+
+.my-masonry-grid {
+  display: -webkit-box; /* Not needed if autoprefixing */
+  display: -ms-flexbox; /* Not needed if autoprefixing */
+  display: flex;
+  /* gutter size offset */
+  margin-left: -30px;
+  /* @apply ml-4 md:ml-8; */
+  width: auto;
+}
+.my-masonry-grid_column {
+  /* gutter size */
+  padding-left: 30px;
+  /* @apply pl-4 md:pl-8; */
+  background-clip: padding-box;
+}
+
+/* Style your items */
+.my-masonry-grid_column > div { /* change div to reference your elements you put in <Masonry> */
+  background: grey;
+  margin-bottom: 30px;
+  /* @apply mb-4 md:mb-8; */
+}
+
+.markdown-container > h3{
+  @apply text-emerald-600 antialiased;
+}
+.markdown-container > h1,
+.markdown-container > h2 {
+  @apply text-emerald-700 antialiased;
+}
+.markdown-container > p,
+.markdown-container strong,
+.markdown-container blockquote,
+.prose a {
+  @apply text-gray-700 dark:text-gray-300 antialiased;
+}
+
+.markdown-container figure {
+  @apply aspect-video mx-auto;
+}
+
+.markdown-container blockquote {
+  @apply border-l-4 border-gray-700 dark:border-gray-200;
+}
+.prose > pre, .prose-lg > pre, .md\:prose-lg > pre{
+  @apply dark:bg-gray-200 bg-gray-800;
+  padding: 0 !important;
+}
+
+.prose pre > pre, .prose-lg pre > pre{
+  margin: 0 !important;
+  @apply md:m-0 m-0;
+}
+
+.swiper-container{
+  @apply py-3 rounded-md;
+}
+
+.swiper-slide{
+  @apply rounded-md overflow-hidden;
+}
+
+.swiper-pagination {
+  pointer-events: all !important;
+}
+
+.swiper-button-next, .swiper-button-prev{
+  @apply text-emerald-600 !important;
 }
