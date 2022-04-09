@@ -45,7 +45,9 @@ function Galleries() {
         id="homepageGallery"
         className="relative w-full px-4 py-2 md:px-8 md:py-4 lg:px-16 mt-8 scroll-mt-20 md:scroll-mt-28"
       >
-        <h2 className="text-2xl font-semibold text-emerald-700 text-center">Galleries</h2>
+        <h2 className="text-2xl font-semibold text-emerald-700 text-center">
+          Galleries
+        </h2>
         <div className="w-full md:w-4/5 md:mx-auto mt-6">
           <Masonry
             breakpointCols={breakPoints}
@@ -82,11 +84,11 @@ function Galleries() {
               })}
           </Masonry>
         </div>
-        {route.route == "/" && galleries && galleries.length > 9 ? (
+        {route.route == "/" ? (
           <div className="flex justify-center items-center w-full mt-2 cursor-pointer">
             <Link href="/gallery">
-              <a className="px-3 py-2 uppercase rounded-xl bg-emerald-700 dark:text-gray-800 text-emerald-50">
-                more
+              <a className="px-6 py-2 rounded-lg bg-emerald-700 text-emerald-50 shadow-md shadow-emerald-500/50">
+                More Galleries
               </a>
             </Link>
           </div>

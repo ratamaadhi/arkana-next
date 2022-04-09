@@ -47,7 +47,7 @@ function GalleryPage() {
       ) : null}
       <div
         id="homepageGallery"
-        className="relative w-full px-4 py-2 md:px-8 md:py-4 lg:px-16 mt-8 scroll-mt-20 md:scroll-mt-28"
+        className="relative w-full min-h-[80vh] px-4 py-2 md:px-8 md:py-4 lg:px-16 mt-8"
       >
         <h2 className="text-2xl font-semibold text-emerald-700 text-center">
           Galleries
