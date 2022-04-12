@@ -77,8 +77,8 @@ function GalleryPage() {
                       placeholder="blur"
                       blurDataURL={`data:image/svg+xml;base64,${toBase64(
                         shimmer(
-                          item.foto.formats.thumbnail.width,
-                          item.foto.formats.thumbnail.height
+                          item.foto.width,
+                          item.foto.height
                         )
                       )}`}
                       className={`hover:scale-110 cursor-pointer w-full h-auto object-cover transition duration-300 ease-in-out rounded-xl`}

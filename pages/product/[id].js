@@ -56,16 +56,16 @@ function ProductIdPage({ fallback, id, homepage, ...props }) {
                         <Image
                           key={i}
                           loader={myLoader}
-                          src={getStrapiMedia(foto?.formats.medium)}
+                          src={getStrapiMedia(foto)}
                           alt={foto.hash}
                           layout="responsive"
-                          width={foto.formats.thumbnail.width}
-                          height={foto.formats.thumbnail.height}
+                          width={foto.width}
+                          height={foto.height}
                           placeholder="blur"
                           blurDataURL={`data:image/svg+xml;base64,${toBase64(
                             shimmer(
-                              foto.formats.thumbnail.width,
-                              foto.formats.thumbnail.height
+                              foto.width,
+                              foto.height
                             )
                           )}`}
                         />

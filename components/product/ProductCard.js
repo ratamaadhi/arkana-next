@@ -14,16 +14,16 @@ const ProductCard = ({ product, handleClick }) => {
       <div className="relative w-full bg-emerald-100">
         <Image
           loader={myLoader}
-          src={getStrapiMedia(product.foto[0]?.formats.medium)}
+          src={getStrapiMedia(product.foto[0])}
           alt={product.foto[0].hash}
           layout="responsive"
-          width={product.foto[0].formats.thumbnail.width}
-          height={product.foto[0].formats.thumbnail.height}
+          width={product.foto[0].width}
+          height={product.foto[0].height}
           placeholder="blur"
           blurDataURL={`data:image/svg+xml;base64,${toBase64(
             shimmer(
-              product.foto[0].formats.thumbnail.width,
-              product.foto[0].formats.thumbnail.height
+              product.foto[0].width,
+              product.foto[0].height
             )
           )}`}
         />

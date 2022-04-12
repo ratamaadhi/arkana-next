@@ -30,8 +30,8 @@ function Hero({ homepage }) {
           placeholder="blur"
           blurDataURL={`data:image/svg+xml;base64,${toBase64(
             shimmer(
-              seo.shareImage.formats.thumbnail.width,
-              seo.shareImage.formats.thumbnail.height
+              seo.shareImage.width,
+              seo.shareImage.height
             )
           )}`}
         />

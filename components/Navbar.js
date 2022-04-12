@@ -87,13 +87,13 @@ function Navbar({ ...props }) {
               className="object-contain"
               loader={myLoader}
               layout="responsive"
-              width={favicon.formats.thumbnail.width}
-              height={favicon.formats.thumbnail.height}
+              width={favicon.width}
+              height={favicon.height}
               placeholder="blur"
               blurDataURL={`data:image/svg+xml;base64,${toBase64(
                 shimmer(
-                  favicon.formats.thumbnail.width,
-                  favicon.formats.thumbnail.height
+                  favicon.width,
+                  favicon.height
                 )
               )}`}
             />
