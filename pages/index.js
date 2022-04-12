@@ -35,7 +35,7 @@ function Home({
         <FromUs homepage={!_homePage ? homepage : _homePage} />
         <Product />
         <Galleries />
-        <Testimoni />
+        {/* <Testimoni /> */}
         <Faq />
         <Footer />
       </Layout>
