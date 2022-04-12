@@ -6,7 +6,6 @@ import { GlobalContext } from "../appContext/store";
 import { getStrapiMedia, myLoader, shimmer, toBase64 } from "../lib/media";
 import Image from "next/image";
 import Link from "next/link";
-import * as scrolling from "react-scroll";
 import { useRouter } from "next/router";
 import { onScrollTo } from "../utils/onScrollTo";
 
@@ -26,7 +25,7 @@ function Navbar({ ...props }) {
           onClick={
             router.route === "/"
               ? () => onScrollTo("homepageAbout")
-              : () => null
+              : () => router.push("/#homepageAbout")
           }
           className="px-4 py-2 rounded-md hover:bg-emerald-600 hover:text-white hover:shadow-lg hover:shadow-emerald-700/50 transition delay-75 duration-150 ease-in-out cursor-pointer"
         >
@@ -118,7 +117,7 @@ function Navbar({ ...props }) {
               onClick={
                 router.route === "/"
                   ? () => onScrollTo("homepageAbout")
-                  : () => router.push("/" + "#homepageAbout")
+                  : () => router.push("/#homepageAbout")
               }
               className="px-4 py-2 rounded-md hover:bg-emerald-600 hover:text-white hover:shadow-lg hover:shadow-emerald-700/50 transition delay-75 duration-150 ease-in-out cursor-pointer"
             >
